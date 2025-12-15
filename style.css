@@ -1,4 +1,4 @@
-/* Сброс и базовые стили */
+/* РЎР±СЂРѕСЃ Рё Р±Р°Р·РѕРІС‹Рµ СЃС‚РёР»Рё */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Основной контейнер */
+/* РћСЃРЅРѕРІРЅРѕР№ РєРѕРЅС‚РµР№РЅРµСЂ */
 #allrecords {
     position: fixed;
     top: 0;
@@ -49,7 +49,7 @@ html, body {
     min-height: 550px;
 }
 
-/* Spline контейнер */
+/* Spline РєРѕРЅС‚РµР№РЅРµСЂ */
 #spline-container {
     position: fixed;
     top: 0;
@@ -65,7 +65,7 @@ spline-viewer {
     display: block;
 }
 
-/* Нижняя панель */
+/* РќРёР¶РЅСЏСЏ РїР°РЅРµР»СЊ */
 #bottom-panel {
     position: absolute;
     bottom: 0;
@@ -76,7 +76,7 @@ spline-viewer {
     z-index: 20;
 }
 
-/* БЛОК ARI В ПРАВОМ ВЕРХНЕМ УГЛУ */
+/* Р‘Р›РћРљ ARI Р’ РџР РђР’РћРњ Р’Р•Р РҐРќР•Рњ РЈР“Р›РЈ */
 #ari-info {
     position: absolute;
     top: 30px;
@@ -151,7 +151,7 @@ spline-viewer {
     color: #929292;
 }
 
-/* НАВИГАЦИЯ - равномерное распределение */
+/* РќРђР’РР“РђР¦РРЇ - СЂР°РІРЅРѕРјРµСЂРЅРѕРµ СЂР°СЃРїСЂРµРґРµР»РµРЅРёРµ */
 #navigation-container {
     position: absolute;
     bottom: 40px;
@@ -180,7 +180,7 @@ spline-viewer {
     position: relative;
 }
 
-/* Анимация текста */
+/* РђРЅРёРјР°С†РёСЏ С‚РµРєСЃС‚Р° */
 .hover-group {
     position: relative;
     display: inline-block;
@@ -227,7 +227,7 @@ spline-viewer {
         transform: translateY(-100%);
     }
 
-/* Подчеркивание при наведении */
+/* РџРѕРґС‡РµСЂРєРёРІР°РЅРёРµ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 .nav-link::after {
     content: '';
     position: absolute;
@@ -243,7 +243,7 @@ spline-viewer {
     width: 100%;
 }
 
-/* Проект stand bif */
+/* РџСЂРѕРµРєС‚ stand bif */
 #project-stand-bif {
     position: absolute;
     top: 50%;
@@ -306,7 +306,7 @@ spline-viewer {
     transform: rotate(90deg);
 }
 
-/* Центральный логотип (ТОЛЬКО ОДИН!) */
+/* Р¦РµРЅС‚СЂР°Р»СЊРЅС‹Р№ Р»РѕРіРѕС‚РёРї (РўРћР›Р¬РљРћ РћР”РРќ!) */
 #central-logo {
     position: absolute;
     top: 50%;
@@ -323,7 +323,7 @@ spline-viewer {
         display: block;
     }
 
-/* Логотип студии */
+/* Р›РѕРіРѕС‚РёРї СЃС‚СѓРґРёРё */
 #studio-logo {
     position: absolute;
     top: 15px;
@@ -338,7 +338,7 @@ spline-viewer {
         display: block;
     }
 
-/* Контейнер для фоновых изображений */
+/* РљРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ С„РѕРЅРѕРІС‹С… РёР·РѕР±СЂР°Р¶РµРЅРёР№ */
 #background-images-container {
     position: fixed;
     top: 0;
@@ -363,7 +363,7 @@ spline-viewer {
     pointer-events: none;
 }
 
-/* Адаптивность для мобильных */
+/* РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
 
 @media (max-width: 1200px) {
     #ari-info {
@@ -554,7 +554,7 @@ spline-viewer {
     }
 }
 
-/* Плавное появление */
+/* РџР»Р°РІРЅРѕРµ РїРѕСЏРІР»РµРЅРёРµ */
 @keyframes fadeIn {
     from {
         opacity: 0;
