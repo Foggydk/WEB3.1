@@ -1,0 +1,576 @@
+/* Сброс и базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'TTNorm', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Основной контейнер */
+#allrecords {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#rec1499666941 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    z-index: 1;
+}
+
+.t396 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.t396__artboard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 550px;
+}
+
+/* Spline контейнер */
+#spline-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+spline-viewer {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Нижняя панель */
+#bottom-panel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: #f2f2f2;
+    z-index: 20;
+}
+
+/* БЛОК ARI В ПРАВОМ ВЕРХНЕМ УГЛУ */
+#ari-info {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 100;
+    max-width: 400px;
+    text-align: right;
+    color: #333;
+    font-family: 'TTNorm', Arial, sans-serif;
+}
+
+.ari-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ari-title {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.ari-subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 5px;
+}
+
+.ari-description {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.ari-question {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.ari-separator {
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    margin: 15px 0;
+    opacity: 0.3;
+}
+
+.ari-project {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.project-name {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -0.7px;
+    color: #333;
+}
+
+.project-label {
+    font-size: 12px;
+    color: #929292;
+}
+
+/* НАВИГАЦИЯ - равномерное распределение */
+#navigation-container {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Анимация текста */
+.hover-group {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    height: 1.2em;
+    line-height: 1.2;
+}
+
+    .hover-group .block {
+        position: relative;
+        display: block;
+        transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+        will-change: transform;
+    }
+
+        .hover-group .block:first-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .hover-group .block:last-child {
+            position: relative;
+            visibility: hidden;
+            top: 0;
+            left: 0;
+        }
+
+    .hover-group:hover .block:first-child {
+        transform: translateY(-100%);
+    }
+
+    .hover-group:hover .block:last-child {
+        visibility: visible;
+    }
+
+    .hover-group .letter {
+        display: inline-block;
+        transform: translateY(0);
+        transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .hover-group:hover .letter {
+        transform: translateY(-100%);
+    }
+
+/* Подчеркивание при наведении */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Проект stand bif */
+#project-stand-bif {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: white;
+    padding: 20px;
+    width: 335px;
+    z-index: 50;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+    #project-stand-bif:hover {
+        transform: translateY(-50%) scale(1.02);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+
+    #project-stand-bif a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+.project-image {
+    width: 105px;
+    height: 105px;
+    margin-bottom: 15px;
+    background: url('images/_1.jpg') center/cover no-repeat;
+}
+
+.project-label {
+    font-size: 13px;
+    color: #929292;
+    margin-bottom: 5px;
+}
+
+.project-title {
+    font-size: 13px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -0.7px;
+    margin-bottom: 10px;
+}
+
+.project-arrow {
+    width: 12px;
+    height: 12px;
+}
+
+    .project-arrow img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+#project-stand-bif:hover .project-arrow img {
+    transform: rotate(90deg);
+}
+
+/* Центральный логотип (ТОЛЬКО ОДИН!) */
+#central-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    max-width: 512px;
+    width: 40%;
+}
+
+    #central-logo img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+/* Логотип студии */
+#studio-logo {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    z-index: 100;
+    width: 74px;
+}
+
+    #studio-logo svg {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+/* Контейнер для фоновых изображений */
+#background-images-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    filter: brightness(0.5);
+    pointer-events: none;
+}
+
+/* Адаптивность для мобильных */
+
+@media (max-width: 1200px) {
+    #ari-info {
+        max-width: 350px;
+        right: 20px;
+        top: 20px;
+    }
+
+    .ari-title {
+        font-size: 28px;
+    }
+
+    #navigation-container {
+        padding: 0 4%;
+    }
+
+    .nav-link {
+        font-size: 15px;
+    }
+
+    #central-logo {
+        width: 45%;
+    }
+}
+
+@media (max-width: 992px) {
+    #ari-info {
+        max-width: 300px;
+        right: 15px;
+        top: 15px;
+    }
+
+    .ari-title {
+        font-size: 24px;
+    }
+
+    .ari-subtitle,
+    .ari-description {
+        font-size: 13px;
+    }
+
+    .ari-question {
+        font-size: 12px;
+    }
+
+    #navigation-container {
+        padding: 0 3%;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    #project-stand-bif {
+        width: 300px;
+        right: 15px;
+        padding: 15px;
+    }
+
+    .project-image {
+        width: 90px;
+        height: 90px;
+    }
+
+    #central-logo {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    #ari-info {
+        position: relative;
+        top: auto;
+        right: auto;
+        max-width: 100%;
+        text-align: center;
+        padding: 20px 15px;
+        background: rgba(242, 242, 242, 0.9);
+        margin-bottom: 20px;
+    }
+
+    .ari-content {
+        align-items: center;
+    }
+
+    .ari-title {
+        font-size: 26px;
+    }
+
+    #navigation-container {
+        padding: 0 2%;
+        bottom: 30px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        letter-spacing: -0.6px;
+    }
+
+    #project-stand-bif {
+        width: 280px;
+        right: 10px;
+        padding: 12px;
+    }
+
+    .project-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    #central-logo {
+        width: 60%;
+    }
+
+    #bottom-panel {
+        height: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    #ari-info {
+        padding: 15px 10px;
+    }
+
+    .ari-title {
+        font-size: 22px;
+    }
+
+    .ari-subtitle,
+    .ari-description,
+    .ari-question {
+        font-size: 12px;
+    }
+
+    #navigation-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        bottom: 20px;
+    }
+
+    .nav-item {
+        flex: none;
+        width: auto;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    #project-stand-bif {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        width: 90%;
+        margin: 20px auto;
+        left: 5%;
+    }
+
+    #central-logo {
+        width: 70%;
+        top: 40%;
+    }
+
+    #bottom-panel {
+        height: 80px;
+    }
+
+    #studio-logo {
+        top: 10px;
+        left: 10px;
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    #central-logo {
+        width: 80%;
+    }
+
+    .nav-link {
+        font-size: 13px;
+    }
+
+    .ari-title {
+        font-size: 20px;
+    }
+}
+
+/* Плавное появление */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#ari-info {
+    animation: fadeIn 0.8s ease 0.3s both;
+}
+
+.t396__elem {
+    animation: fadeIn 0.5s ease forwards;
+}
