@@ -1,12 +1,12 @@
-// Основная инициализация
+// РћСЃРЅРѕРІРЅР°СЏ РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('DOM загружен');
+    console.log('DOM Р·Р°РіСЂСѓР¶РµРЅ');
 
-    // Исправление кодировки для русского текста
+    // РСЃРїСЂР°РІР»РµРЅРёРµ РєРѕРґРёСЂРѕРІРєРё РґР»СЏ СЂСѓСЃСЃРєРѕРіРѕ С‚РµРєСЃС‚Р°
     document.documentElement.setAttribute('lang', 'ru');
     document.documentElement.setAttribute('xml:lang', 'ru');
 
-    // Установка мета-тега кодировки
+    // РЈСЃС‚Р°РЅРѕРІРєР° РјРµС‚Р°-С‚РµРіР° РєРѕРґРёСЂРѕРІРєРё
     let metaCharset = document.querySelector('meta[charset]');
     if (!metaCharset) {
         metaCharset = document.createElement('meta');
@@ -14,38 +14,38 @@ document.addEventListener('DOMContentLoaded', function () {
         document.head.prepend(metaCharset);
     }
 
-    // Инициализация всех функций
+    // РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РІСЃРµС… С„СѓРЅРєС†РёР№
     setTimeout(initPage, 100);
 });
 
 function initPage() {
-    console.log('Инициализация страницы...');
+    console.log('РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ СЃС‚СЂР°РЅРёС†С‹...');
 
-    // 1. Анимации текста навигации
+    // 1. РђРЅРёРјР°С†РёРё С‚РµРєСЃС‚Р° РЅР°РІРёРіР°С†РёРё
     initTextAnimations();
 
-    // 2. Анимации фоновых изображений
+    // 2. РђРЅРёРјР°С†РёРё С„РѕРЅРѕРІС‹С… РёР·РѕР±СЂР°Р¶РµРЅРёР№
     initBackgroundAnimations();
 
-    // 3. Анимации проекта
+    // 3. РђРЅРёРјР°С†РёРё РїСЂРѕРµРєС‚Р°
     initProjectAnimations();
 
-    // 4. Анимация появления страницы
+    // 4. РђРЅРёРјР°С†РёСЏ РїРѕСЏРІР»РµРЅРёСЏ СЃС‚СЂР°РЅРёС†С‹
     initPageAppearance();
 
-    // 5. Инициализация курсора для логотипа
+    // 5. РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РєСѓСЂСЃРѕСЂР° РґР»СЏ Р»РѕРіРѕС‚РёРїР°
     initLogoCursorInteraction();
 
-    // 6. Инициализация блока ARI
+    // 6. РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ Р±Р»РѕРєР° ARI
     initAriBlock();
 
-    console.log('Все анимации инициализированы');
+    console.log('Р’СЃРµ Р°РЅРёРјР°С†РёРё РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°РЅС‹');
 }
 
-// 1. Анимации текста навигации
+// 1. РђРЅРёРјР°С†РёРё С‚РµРєСЃС‚Р° РЅР°РІРёРіР°С†РёРё
 function initTextAnimations() {
     const navLinks = document.querySelectorAll('.nav-link.hover-group');
-    console.log('Найдено навигационных ссылок:', navLinks.length);
+    console.log('РќР°Р№РґРµРЅРѕ РЅР°РІРёРіР°С†РёРѕРЅРЅС‹С… СЃСЃС‹Р»РѕРє:', navLinks.length);
 
     navLinks.forEach(link => {
         const letters = link.querySelectorAll('.letter');
@@ -67,9 +67,9 @@ function initTextAnimations() {
     });
 }
 
-// 2. Анимации фоновых изображений
+// 2. РђРЅРёРјР°С†РёРё С„РѕРЅРѕРІС‹С… РёР·РѕР±СЂР°Р¶РµРЅРёР№
 function initBackgroundAnimations() {
-    // Эти изображения будут появляться при наведении на навигацию
+    // Р­С‚Рё РёР·РѕР±СЂР°Р¶РµРЅРёСЏ Р±СѓРґСѓС‚ РїРѕСЏРІР»СЏС‚СЊСЃСЏ РїСЂРё РЅР°РІРµРґРµРЅРёРё РЅР° РЅР°РІРёРіР°С†РёСЋ
     const backgroundImages = {
         'store': 'images/R2_2.jpg',
         'projects': 'images/02_-_02_1_1.jpg',
@@ -77,12 +77,12 @@ function initBackgroundAnimations() {
         'contacts': 'images/_1.png'
     };
 
-    // Создаем контейнер для фоновых изображений
+    // РЎРѕР·РґР°РµРј РєРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ С„РѕРЅРѕРІС‹С… РёР·РѕР±СЂР°Р¶РµРЅРёР№
     const bgContainer = document.createElement('div');
     bgContainer.id = 'background-images-container';
     document.body.appendChild(bgContainer);
 
-    // Добавляем фоновые изображения (скрытые)
+    // Р”РѕР±Р°РІР»СЏРµРј С„РѕРЅРѕРІС‹Рµ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ (СЃРєСЂС‹С‚С‹Рµ)
     Object.keys(backgroundImages).forEach(key => {
         const imgDiv = document.createElement('div');
         imgDiv.className = 'bg-image';
@@ -91,7 +91,7 @@ function initBackgroundAnimations() {
         bgContainer.appendChild(imgDiv);
     });
 
-    // Назначаем обработчики наведения
+    // РќР°Р·РЅР°С‡Р°РµРј РѕР±СЂР°Р±РѕС‚С‡РёРєРё РЅР°РІРµРґРµРЅРёСЏ
     const navElements = {
         'store': document.getElementById('nav-store'),
         'projects': document.getElementById('nav-projects'),
@@ -120,7 +120,7 @@ function initBackgroundAnimations() {
     });
 }
 
-// 3. Анимации проекта
+// 3. РђРЅРёРјР°С†РёРё РїСЂРѕРµРєС‚Р°
 function initProjectAnimations() {
     const projectElement = document.getElementById('project-stand-bif');
 
@@ -147,17 +147,17 @@ function initProjectAnimations() {
     }
 }
 
-// 4. Взаимодействие курсора с логотипом
+// 4. Р’Р·Р°РёРјРѕРґРµР№СЃС‚РІРёРµ РєСѓСЂСЃРѕСЂР° СЃ Р»РѕРіРѕС‚РёРїРѕРј
 function initLogoCursorInteraction() {
     const logo = document.getElementById('central-logo');
 
     if (!logo) return;
 
-    // Создаем интерактивную область
+    // РЎРѕР·РґР°РµРј РёРЅС‚РµСЂР°РєС‚РёРІРЅСѓСЋ РѕР±Р»Р°СЃС‚СЊ
     logo.style.cursor = 'pointer';
     logo.style.transition = 'transform 0.3s ease';
 
-    // Эффект при наведении
+    // Р­С„С„РµРєС‚ РїСЂРё РЅР°РІРµРґРµРЅРёРё
     logo.addEventListener('mouseenter', function () {
         this.style.transform = 'translate(-50%, -50%) scale(1.05)';
     });
@@ -166,33 +166,33 @@ function initLogoCursorInteraction() {
         this.style.transform = 'translate(-50%, -50%) scale(1)';
     });
 
-    // Клик по логотипу
+    // РљР»РёРє РїРѕ Р»РѕРіРѕС‚РёРїСѓ
     logo.addEventListener('click', function () {
         window.location.href = 'https://art-mnfst.com';
     });
 
-    // Слежение за курсором (опционально)
+    // РЎР»РµР¶РµРЅРёРµ Р·Р° РєСѓСЂСЃРѕСЂРѕРј (РѕРїС†РёРѕРЅР°Р»СЊРЅРѕ)
     document.addEventListener('mousemove', function (e) {
         const x = e.clientX / window.innerWidth;
         const y = e.clientY / window.innerHeight;
 
-        // Легкий параллакс эффект
+        // Р›РµРіРєРёР№ РїР°СЂР°Р»Р»Р°РєСЃ СЌС„С„РµРєС‚
         logo.style.transform = `translate(-50%, -50%) translate(${x * 10}px, ${y * 10}px)`;
     });
 }
 
-// 5. Функциональность для блока ARI
+// 5. Р¤СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕСЃС‚СЊ РґР»СЏ Р±Р»РѕРєР° ARI
 function initAriBlock() {
     const ariBlock = document.getElementById('ari-info');
     const projectLink = document.querySelector('.ari-project');
 
     if (!ariBlock) return;
 
-    // Делаем блок интерактивным
+    // Р”РµР»Р°РµРј Р±Р»РѕРє РёРЅС‚РµСЂР°РєС‚РёРІРЅС‹Рј
     ariBlock.style.cursor = 'default';
     ariBlock.style.transition = 'all 0.3s ease';
 
-    // Эффект при наведении на весь блок
+    // Р­С„С„РµРєС‚ РїСЂРё РЅР°РІРµРґРµРЅРёРё РЅР° РІРµСЃСЊ Р±Р»РѕРє
     ariBlock.addEventListener('mouseenter', function () {
         this.style.transform = 'translateY(-5px)';
         this.style.opacity = '0.95';
@@ -203,7 +203,7 @@ function initAriBlock() {
         this.style.opacity = '1';
     });
 
-    // Клик по проекту в блоке ARI
+    // РљР»РёРє РїРѕ РїСЂРѕРµРєС‚Сѓ РІ Р±Р»РѕРєРµ ARI
     if (projectLink) {
         projectLink.style.cursor = 'pointer';
         projectLink.style.transition = 'all 0.3s ease';
@@ -223,7 +223,7 @@ function initAriBlock() {
         });
     }
 
-    // Добавляем возможность скрытия на мобильных
+    // Р”РѕР±Р°РІР»СЏРµРј РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ СЃРєСЂС‹С‚РёСЏ РЅР° РјРѕР±РёР»СЊРЅС‹С…
     if (window.innerWidth < 768) {
         ariBlock.addEventListener('click', function () {
             this.classList.toggle('collapsed');
@@ -231,7 +231,7 @@ function initAriBlock() {
     }
 }
 
-// 6. Анимация появления страницы
+// 6. РђРЅРёРјР°С†РёСЏ РїРѕСЏРІР»РµРЅРёСЏ СЃС‚СЂР°РЅРёС†С‹
 function initPageAppearance() {
     const allRecords = document.getElementById('allrecords');
 
@@ -248,7 +248,7 @@ function initPageAppearance() {
     }
 }
 
-// Адаптация под разные экраны
+// РђРґР°РїС‚Р°С†РёСЏ РїРѕРґ СЂР°Р·РЅС‹Рµ СЌРєСЂР°РЅС‹
 function handleResize() {
     const screenWidth = window.innerWidth;
     const centralLogo = document.getElementById('central-logo');
@@ -265,24 +265,24 @@ function handleResize() {
         }
     }
 
-    // Адаптация навигации
+    // РђРґР°РїС‚Р°С†РёСЏ РЅР°РІРёРіР°С†РёРё
     if (screenWidth < 768 && navigationContainer) {
         navigationContainer.style.padding = '0 2%';
     } else if (navigationContainer) {
         navigationContainer.style.padding = '0 5%';
     }
 
-    // Адаптация блока ARI
+    // РђРґР°РїС‚Р°С†РёСЏ Р±Р»РѕРєР° ARI
     if (ariBlock) {
         if (screenWidth < 768) {
-            // На мобильных меняем позиционирование
+            // РќР° РјРѕР±РёР»СЊРЅС‹С… РјРµРЅСЏРµРј РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёРµ
             ariBlock.style.position = 'relative';
             ariBlock.style.top = 'auto';
             ariBlock.style.right = 'auto';
             ariBlock.style.maxWidth = '100%';
             ariBlock.style.textAlign = 'center';
         } else {
-            // На десктопе возвращаем в правый верхний угол
+            // РќР° РґРµСЃРєС‚РѕРїРµ РІРѕР·РІСЂР°С‰Р°РµРј РІ РїСЂР°РІС‹Р№ РІРµСЂС…РЅРёР№ СѓРіРѕР»
             ariBlock.style.position = 'absolute';
             ariBlock.style.top = '30px';
             ariBlock.style.right = '30px';
@@ -292,7 +292,7 @@ function handleResize() {
     }
 }
 
-// Обработка ошибок Spline
+// РћР±СЂР°Р±РѕС‚РєР° РѕС€РёР±РѕРє Spline
 function handleSplineErrors() {
     const splineContainer = document.getElementById('spline-container');
     if (splineContainer) {
@@ -301,7 +301,7 @@ function handleSplineErrors() {
                 if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
                     const target = mutation.target;
                     if (target.classList.contains('error')) {
-                        console.warn('Spline загрузка не удалась, показываем запасной фон');
+                        console.warn('Spline Р·Р°РіСЂСѓР·РєР° РЅРµ СѓРґР°Р»Р°СЃСЊ, РїРѕРєР°Р·С‹РІР°РµРј Р·Р°РїР°СЃРЅРѕР№ С„РѕРЅ');
                         splineContainer.style.background = '#f2f2f2';
                     }
                 }
@@ -312,24 +312,24 @@ function handleSplineErrors() {
     }
 }
 
-// Инициализация при полной загрузке
+// РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РїСЂРё РїРѕР»РЅРѕР№ Р·Р°РіСЂСѓР·РєРµ
 window.addEventListener('load', function () {
-    console.log('Страница полностью загружена');
+    console.log('РЎС‚СЂР°РЅРёС†Р° РїРѕР»РЅРѕСЃС‚СЊСЋ Р·Р°РіСЂСѓР¶РµРЅР°');
 
-    // Запускаем адаптацию
+    // Р—Р°РїСѓСЃРєР°РµРј Р°РґР°РїС‚Р°С†РёСЋ
     handleResize();
 
-    // Обработка ошибок Spline
+    // РћР±СЂР°Р±РѕС‚РєР° РѕС€РёР±РѕРє Spline
     handleSplineErrors();
 
-    // Ресайз
+    // Р РµСЃР°Р№Р·
     window.addEventListener('resize', handleResize);
 
-    // Проверка кодировки
-    console.log('Кодировка документа:', document.characterSet);
+    // РџСЂРѕРІРµСЂРєР° РєРѕРґРёСЂРѕРІРєРё
+    console.log('РљРѕРґРёСЂРѕРІРєР° РґРѕРєСѓРјРµРЅС‚Р°:', document.characterSet);
 });
 
-// Убираем Яндекс.Метрику для локального тестирования
+// РЈР±РёСЂР°РµРј РЇРЅРґРµРєСЃ.РњРµС‚СЂРёРєСѓ РґР»СЏ Р»РѕРєР°Р»СЊРЅРѕРіРѕ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ
 if (window.location.protocol === 'file:') {
     window['yaCounter'] = null;
 }
