@@ -9,7 +9,8 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    font-family: 'TTNorm', Arial, sans-serif;
+    /* ОСНОВНОЙ ШРИФТ ИЗМЕНЕН НА ROBOTO */
+    font-family: 'Roboto', Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -85,7 +86,7 @@ spline-viewer {
     max-width: 400px;
     text-align: right;
     color: #333;
-    font-family: 'TTNorm', Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
 .ari-content {
@@ -178,6 +179,7 @@ spline-viewer {
     text-transform: uppercase;
     cursor: pointer;
     position: relative;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
 /* Анимация текста */
@@ -189,43 +191,43 @@ spline-viewer {
     line-height: 1.2;
 }
 
-    .hover-group .block {
-        position: relative;
-        display: block;
-        transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-        will-change: transform;
-    }
+.hover-group .block {
+    position: relative;
+    display: block;
+    transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    will-change: transform;
+}
 
-        .hover-group .block:first-child {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
+.hover-group .block:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
-        .hover-group .block:last-child {
-            position: relative;
-            visibility: hidden;
-            top: 0;
-            left: 0;
-        }
+.hover-group .block:last-child {
+    position: relative;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+}
 
-    .hover-group:hover .block:first-child {
-        transform: translateY(-100%);
-    }
+.hover-group:hover .block:first-child {
+    transform: translateY(-100%);
+}
 
-    .hover-group:hover .block:last-child {
-        visibility: visible;
-    }
+.hover-group:hover .block:last-child {
+    visibility: visible;
+}
 
-    .hover-group .letter {
-        display: inline-block;
-        transform: translateY(0);
-        transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-    }
+.hover-group .letter {
+    display: inline-block;
+    transform: translateY(0);
+    transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
 
-    .hover-group:hover .letter {
-        transform: translateY(-100%);
-    }
+.hover-group:hover .letter {
+    transform: translateY(-100%);
+}
 
 /* Подчеркивание при наведении */
 .nav-link::after {
@@ -258,16 +260,16 @@ spline-viewer {
     transition: all 0.3s ease;
 }
 
-    #project-stand-bif:hover {
-        transform: translateY(-50%) scale(1.02);
-        box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-    }
+#project-stand-bif:hover {
+    transform: translateY(-50%) scale(1.02);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
 
-    #project-stand-bif a {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-    }
+#project-stand-bif a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
 
 .project-image {
     width: 105px;
@@ -296,11 +298,11 @@ spline-viewer {
     height: 12px;
 }
 
-    .project-arrow img {
-        width: 100%;
-        height: auto;
-        transition: transform 0.3s ease;
-    }
+.project-arrow img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
 
 #project-stand-bif:hover .project-arrow img {
     transform: rotate(90deg);
@@ -317,11 +319,11 @@ spline-viewer {
     width: 40%;
 }
 
-    #central-logo img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
+#central-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 /* Логотип студии */
 #studio-logo {
@@ -332,11 +334,11 @@ spline-viewer {
     width: 74px;
 }
 
-    #studio-logo svg {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
+#studio-logo svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 /* Контейнер для фоновых изображений */
 #background-images-container {
@@ -371,19 +373,19 @@ spline-viewer {
         right: 20px;
         top: 20px;
     }
-
+    
     .ari-title {
         font-size: 28px;
     }
-
+    
     #navigation-container {
         padding: 0 4%;
     }
-
+    
     .nav-link {
         font-size: 15px;
     }
-
+    
     #central-logo {
         width: 45%;
     }
@@ -395,39 +397,39 @@ spline-viewer {
         right: 15px;
         top: 15px;
     }
-
+    
     .ari-title {
         font-size: 24px;
     }
-
+    
     .ari-subtitle,
     .ari-description {
         font-size: 13px;
     }
-
+    
     .ari-question {
         font-size: 12px;
     }
-
+    
     #navigation-container {
         padding: 0 3%;
     }
-
+    
     .nav-link {
         font-size: 14px;
     }
-
+    
     #project-stand-bif {
         width: 300px;
         right: 15px;
         padding: 15px;
     }
-
+    
     .project-image {
         width: 90px;
         height: 90px;
     }
-
+    
     #central-logo {
         width: 50%;
     }
@@ -444,40 +446,40 @@ spline-viewer {
         background: rgba(242, 242, 242, 0.9);
         margin-bottom: 20px;
     }
-
+    
     .ari-content {
         align-items: center;
     }
-
+    
     .ari-title {
         font-size: 26px;
     }
-
+    
     #navigation-container {
         padding: 0 2%;
         bottom: 30px;
     }
-
+    
     .nav-link {
         font-size: 12px;
         letter-spacing: -0.6px;
     }
-
+    
     #project-stand-bif {
         width: 280px;
         right: 10px;
         padding: 12px;
     }
-
+    
     .project-image {
         width: 80px;
         height: 80px;
     }
-
+    
     #central-logo {
         width: 60%;
     }
-
+    
     #bottom-panel {
         height: 100px;
     }
@@ -487,33 +489,33 @@ spline-viewer {
     #ari-info {
         padding: 15px 10px;
     }
-
+    
     .ari-title {
         font-size: 22px;
     }
-
+    
     .ari-subtitle,
     .ari-description,
     .ari-question {
         font-size: 12px;
     }
-
+    
     #navigation-container {
         flex-direction: column;
         align-items: center;
         gap: 15px;
         bottom: 20px;
     }
-
+    
     .nav-item {
         flex: none;
         width: auto;
     }
-
+    
     .nav-link {
         font-size: 14px;
     }
-
+    
     #project-stand-bif {
         position: relative;
         top: auto;
@@ -523,16 +525,16 @@ spline-viewer {
         margin: 20px auto;
         left: 5%;
     }
-
+    
     #central-logo {
         width: 70%;
         top: 40%;
     }
-
+    
     #bottom-panel {
         height: 80px;
     }
-
+    
     #studio-logo {
         top: 10px;
         left: 10px;
@@ -544,11 +546,11 @@ spline-viewer {
     #central-logo {
         width: 80%;
     }
-
+    
     .nav-link {
         font-size: 13px;
     }
-
+    
     .ari-title {
         font-size: 20px;
     }
@@ -560,7 +562,6 @@ spline-viewer {
         opacity: 0;
         transform: translateY(-20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
