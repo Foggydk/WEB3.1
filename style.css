@@ -111,14 +111,14 @@ spline-viewer {
 }
 
 .ari-description {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.4;
     margin-bottom: 10px;
-    color: #606;
+    color: #333;
 }
 
 .ari-question {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     line-height: 1.4;
     margin-bottom: 15px;
